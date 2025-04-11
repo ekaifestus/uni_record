@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    margin: 20px;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logout-area button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.session-area, .classlist-area, .studentlist-area {
+    margin-bottom: 20px;
+}
+
+select, input[type="date"], button {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Table Styles for Student List */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.student-table th, .student-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.student-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.student-entry:hover {
+    background-color: #f0f0f0;
+}
+
+/* Course List */
+.classcard {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.classcard:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling the dropdown */
+#ddlclass {
+    width: 100%;
+    padding: 10px;
+}
+
+#attendanceDate {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Button styles */
+#submitAttendance {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#submitAttendance:hover {
+    background-color: #45a049;
+}
+
