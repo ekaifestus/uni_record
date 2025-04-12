@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 $path = $_SERVER['DOCUMENT_ROOT'];
-require_once $path . "/schoolpro/database/database.php";
+require_once $path . "/uni_record/database/database.php";
 
 // Ensure the user is logged in
 if (!isset($_SESSION['staff_id'])) {
@@ -268,6 +268,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
 
     <script src="js/register.js"></script>
     <script src="js/navb.js"></script>
-    <script src="js/logout.js"></script>
+    <script src="js/Slogout.js"></script>
 </body>
 </html>

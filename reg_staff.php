@@ -1,6 +1,6 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
-require_once $path . "/schoolpro/database/database.php";
+require_once $path . "/uni_record/database/database.php";
 
 $dbo = new Database();
 $staff_id = $password = $confirm_password = $name = "";

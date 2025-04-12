@@ -1,6 +1,6 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
-require_once $path . "/schoolpro/database/database.php"; // Adjust the path if needed
+require_once $path . "/uni_record/database/database.php"; // Adjust the path if needed
 
 // Create an instance of the Database class
 $database = new Database();

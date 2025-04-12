@@ -1,7 +1,7 @@
 <?php
 session_start();
 $path = $_SERVER['DOCUMENT_ROOT'];
-require_once $path . "/schoolpro/database/database.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/uni_record/database/database.php";
 
 unset($_SESSION["current_user"]);
 $rv = [];
