@@ -79,9 +79,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $courseStmt->execute([":student_id" => $student_id, ":course_id" => $course_id, ":session_id" => $session_id, ":current_course" => $current_course, ":department" => $department]);
 
                 // Insert into attendance_details
-                $attendanceInsert = "INSERT INTO attendance_details (course_id, session_id, student_id, on_date, status) VALUES (:course_id, :session_id, :student_id, CURDATE(), 'PRESENT')";
+                $attendanceInsert = "INSERT INTO attendance_details (course_id, session_id, student_id, name, on_date, status) VALUES (:course_id, :session_id, :student_id, :name, CURDATE(), 'PRESENT')";
                 $attendanceStmt = $dbo->conn->prepare($attendanceInsert);
-                $attendanceStmt->execute([":student_id" => $student_id, ":course_id" => $course_id, ":session_id" => $session_id]);
+                $attendanceStmt->execute([":student_id" => $student_id, ":course_id" => $course_id, ":session_id" => $session_id, ":name" => $name]);
 
                 // Check if course_details exists for the same student_id and session_id
                 $checkCourse = "SELECT 1 FROM course_details WHERE student_id = :student_id AND session_id = :session_id";
