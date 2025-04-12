@@ -1,6 +1,5 @@
 <?php
 session_start();
-$path = $_SERVER['DOCUMENT_ROOT'];
 require_once $_SERVER['DOCUMENT_ROOT'] . "/uni_record/database/database.php";
 
 unset($_SESSION["current_user"]);
@@ -23,9 +22,7 @@ $stmt_sessions->execute();
 $sessions = $stmt_sessions->fetchAll(PDO::FETCH_ASSOC);
 
 // Fetch unique courses for the student
-$query_courses = "SELECT DISTINCT course_id, current_course 
-                  FROM course_registration 
-                  WHERE student_id = :student_id";
+$query_courses = "SELECT DISTINCT course_id, current_course  FROM course_registration  WHERE student_id = :student_id";
 $stmt_courses = $dbo->conn->prepare($query_courses);
 $stmt_courses->bindParam(':student_id', $student_id);
 $stmt_courses->execute();

@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 $path = $_SERVER['DOCUMENT_ROOT'];
 require_once $path . "/uni_record/database/database.php";
 
@@ -42,9 +42,9 @@ try {
 // Fetch files related to the student's course
 try {
     $stmt = $dbo->conn->prepare("
-        SELECT id, course_id, assignment1, assignment2, cat 
-        FROM course_details 
-        WHERE course_id = :course_id 
+        SELECT id, course_id, assignment1, assignment2, cat
+        FROM course_details
+        WHERE course_id = :course_id
         ORDER BY created_at DESC
     ");
     $stmt->execute([':course_id' => $student_course_id]);

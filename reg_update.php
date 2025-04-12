@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 $path = $_SERVER['DOCUMENT_ROOT'];
 require_once $path . "/uni_record/database/database.php";
 

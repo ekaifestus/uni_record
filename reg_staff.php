@@ -28,8 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Hash the password before storing it in the database
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             try {
-                $insertQuery = "INSERT INTO staff_details (staff_id, password, name) 
-                                VALUES (:staff_id, :password, :name)";
+                $insertQuery = "INSERT INTO staff_details (staff_id, password, name) VALUES (:staff_id, :password, :name)";
                 $insertStmt = $dbo->conn->prepare($insertQuery);
                 $insertStmt->execute([
                     ":staff_id" => $staff_id,
